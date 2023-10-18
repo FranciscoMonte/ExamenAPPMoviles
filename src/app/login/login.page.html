@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>RegisterAPP Duoc</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card-content id="contenedor">
+    <form [formGroup]="formularioLogin" id="login">
+      <ion-label class="titulo">Iniciar Sesión</ion-label>
+
+      <ion-item class="usuario">
+        <ion-label position="floating">Correo Electrónico</ion-label>
+        <ion-input formControlName="usuario" type="text" placeholder="correo@duocuc.cl"></ion-input>
+      </ion-item>
+
+      <ion-item class="usuario">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input formControlName="contrasena" type="password" placeholder="usuario1234"></ion-input>
+      </ion-item>
+
+      <ion-button id="btn" type="submit" color="light" (click)="ingresar()">Iniciar Sesión</ion-button>
+      <a id="recup-pass" href="/recup-pass/">Recuperar Contraseña</a>
+      <a id="recup-pass" href="/registro/">¿No tienes cuenta?, Registrate ahora!</a>
+    </form>
+
+    <div class="convertidor">
+      <p>Valor del dolar:</p>
+      <ion-icon name="cash-outline"></ion-icon>
+      <p>${{ DOLAR_VALUE }} CLP</p>
+      <p>Temperatura actual:</p>
+      <ion-icon name="thermometer-outline"></ion-icon>
+      <p>{{weatherTemp - 273.15 | number:'2.0'}} °C</p>
+    </div>
+
+  </ion-card-content>
+</ion-content>

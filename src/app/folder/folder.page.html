@@ -1,0 +1,19 @@
+<ion-header *ngIf="!showContent" [class.transparent-background]="showContent" [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>Bienvenido {{ nombreUsuario }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content *ngIf="!showContent" [class.transparent-background]="showContent" [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <section>
+    <div id="scan_qr">
+      <p>Pulse la cámara para escanear el código QR que el docente le proporcionará en la pantalla en clases.</p>
+      <ion-icon (click)="startScan()" (click)="vibrar()"  name="camera" id="camera"></ion-icon>
+      </div>
+  </section>
+</ion-content>

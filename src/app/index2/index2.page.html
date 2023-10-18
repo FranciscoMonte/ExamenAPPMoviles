@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-title>Bienvenido {{nombreUsuario}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <section>
+    <div id="scan_qr">
+      <ion-button color="light" id="btn">Generar QR</ion-button>
+      <ion-img id="img" src="/assets/img/qr.png"></ion-img>
+    </div>
+  </section>
+</ion-content>
